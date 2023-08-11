@@ -1,0 +1,47 @@
+body{
+    overflow-x: hidden;
+}
+.head{
+    width: 100%;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: fixed; */
+
+    gap: 27rem;
+    padding: 8px;
+    z-index:2;
+    
+
+ 
+}
+.sections{
+    display: flex;
+    gap: 30px;
+    margin-right: 6rem;
+    align-items: right;
+}
+.sections a{
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.sections a:hover{
+    color: var(--color-primary);
+}
+.logo{
+    height: 3rem;
+    display: flex;
+    width: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    background: none;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 20rem;
+    margin-top: 0.5rem;
+}
