@@ -1,6 +1,5 @@
 import React from 'react'
 import './members.css'
-import PROFILE from '../../assets/profile-photo.jpg'
 import {GrInstagram} from 'react-icons/gr'
 import {AiOutlineLinkedin} from 'react-icons/ai'
 import PRESIDENT from '../../assets/sarvadnya.JPG'

@@ -1,26 +1,19 @@
-import React from 'react'
-import Navbar from './components/nav/Navbar'
-import Landing from './components/landing/Landing'
-import About from './components/about/About'
-import Teams from './components/teams/Teams'
-import Events from './components/events/Events'
-import Members from './components/members/Members'
-import Footer from './components/footer/Footer'
-import Gallery from './components/gallery/Gallery'
+import React from 'react';
+import { BrowserRouter as Router, Routes,Route, BrowserRouter } from 'react-router-dom';
+import Main from './Main';
+import Admin from './components/admin/Admin'; 
 
 const App = () => {
   return (
     <>
-        <Navbar/>
-        <Landing/>
-        <About/>
-        <Gallery/> 
-        <Teams/>
-        <Events/>
-        <Members/>
-        <Footer/>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path='/' element = {<Main/>}/>
+          <Route exact path='/admin' element = {<Admin/>}/>
+        </Routes>
+      </BrowserRouter>
     </>
   )
-}
+};
 
-export default App
+export default App;

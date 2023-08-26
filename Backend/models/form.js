@@ -1,24 +1,46 @@
-const mongoose = require('express')
+const mongoose = require('mongoose');
 
-const formSchema = new mongoose.Schema({
+const studentSchema =new mongoose.Schema({
     name:{
+        type: String,
+        required: true,
+        trim: true
+    },
+    prn:{
+        type:String,
+        required: true,
+        trim: true
+    },
+    yos:{
+        type: String,
+        required: true,
+        trim: true
+    },
+    transactionId:{
+        type: String,
+        required: true,
+        trim: true
+    },
+    phone:{
         type: String,
         required: true,
         trim: true
     },
     email:{
         type: String,
-        required: true,
+        // unique: true,
+        required:true,
         trim: true
     },
-    branch:{
-        type: String,
-        required: true,
-        trim:true
+    otp:{
+        type:Number,
+        required:true
     },
-    year:{
-        type: String,
-        required: true,
-        trim: true
+    visited:{
+        type:Boolean,
+        default:false,
+        required:true
     }
-})
+});
+
+module.exports=mongoose.model('Student',studentSchema);
