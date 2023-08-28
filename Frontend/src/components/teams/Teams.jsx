@@ -61,11 +61,8 @@ const Teams = () => {
                 <div className='card-footer'>
                   <h6 className='heading'>{card[index]}</h6>
                   {
-                    
                     index===expandIndex && (
                       <p>{cardDescription[index]}</p>
-                      
-
                     )
                   }
                 </div>

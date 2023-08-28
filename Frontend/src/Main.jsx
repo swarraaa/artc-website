@@ -11,7 +11,7 @@ import Footer from './components/footer/Footer'
 const Main = () => {
   return (
     <>
-     <Navbar/>
+    <Navbar/>
     <Landing/>
     <About/>
     <Gallery/>

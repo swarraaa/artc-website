@@ -15,7 +15,7 @@ const Navbar = () => {
         <a href='#about' onClick={()=>SetActiveNav('#about')} className={activeNav==='#about' ? 'active': ''}>About Us</a>
         <a href='#teams' onClick={()=>SetActiveNav('#teams')} className={activeNav==='#teams' ? 'active': ''}>Teams</a>
         <a href='#events' onClick={()=>SetActiveNav('#events')} className={activeNav==='#events' ? 'active': ''}>Events</a>
-        <a href='#contact' onClick={()=>SetActiveNav('#contact')} className={activeNav==='#contact' ? 'active': ''}>Contact Us</a>
+        <a href='#footer' onClick={()=>SetActiveNav('#contact')} className={activeNav==='#contact' ? 'active': ''}>Contact Us</a>
       </div>
     </header>
   )

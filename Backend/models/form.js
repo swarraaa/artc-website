@@ -11,16 +11,6 @@ const studentSchema =new mongoose.Schema({
         required: true,
         trim: true
     },
-    yos:{
-        type: String,
-        required: true,
-        trim: true
-    },
-    transactionId:{
-        type: String,
-        required: true,
-        trim: true
-    },
     phone:{
         type: String,
         required: true,

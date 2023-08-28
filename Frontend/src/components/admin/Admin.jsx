@@ -42,7 +42,6 @@ const Admin = () => {
                         <tr>
                             <th>Name</th>
                             <th>PRN</th>
-                            <th>Year</th>
                             <th>OTP</th>
                             <th>Scanned</th>
                         </tr>
@@ -57,7 +56,6 @@ const Admin = () => {
                             <tr key={index}>
                                 <td>{user.name}</td>
                                 <td>{user.prn}</td>
-                                <td>{user.yos}</td>
                                 <td>{user.otp}</td>
                                 <td><input type="checkbox" checked={user.visited} onChange={(e)=>{handleCheckBox(e.target.checked,user._id)}}/></td>
                             </tr>
