@@ -47,31 +47,54 @@ const Events = () => {
     }
     const {data:{key}} = await axios.get("http://localhost:5000/payment/getKey")
     const {data:{order}} = await axios.post("http://localhost:5000/payment/checkout") 
-    var options = {
-      key, // Enter the Key ID generated from the Dashboard
-      amount: "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    const data1 = {name,prn,phone,email};
+    console.log(data1);
+    const options = {
+      key: key, // Enter the Key ID generated from the Dashboard
+      amount: order.amount.toString(),
       currency: "INR",
-      name: name,
-      description: "Ticket Payment",
-      image: {logo},
+      name: "Art Circle",
+      description: "Test Transaction",
+      image: logo,
       order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: "http://localhost:5000/payment/paymentVerification",
+      handler: async function (response) {
+        const data = {
+          orderCreationId: order.id,
+          razorpay_payment_id: response.razorpay_payment_id,
+          razorpay_order_id: response.razorpay_order_id,
+          razorpay_signature: response.razorpay_signature,
+          name: name,
+          prn: prn,
+          phone: phone,
+          email: email
+        };
+        const result = await axios.post("http://localhost:5000/payment/paymentverification", data);
+        console.log(result);
+        if(result.data.success === true){
+          const res = API.createNewStudent(data1);
+          Swal.fire('Payment Successful')
+
+        }
+        else{
+          Swal.fire('Payment Failed')
+        }
+      },
       prefill: {
         name: name,
         email: email,
         contact: phone
       },
       notes: {
-        address: "Razorpay Corporate Office"
+        address: "Art Circle"
       },
       theme: {
-        color: "#21E6C1"
+        color: "#3399cc"
       }
-  };
+    };
+
+  // console.log(name,prn,phone,email);
   const razor = new window.Razorpay(options);
   razor.open();
-  const data1 = {name,prn,phone,email};
-  const res = API.createNewStudent(data1);
   }
 
   return (
@@ -95,12 +118,12 @@ const Events = () => {
           <div className="modal-content">
             <span className="close" onClick={closeModal}>&times;</span>
             <div className='event-form'>
-            <form onSubmit={handleSubmit}>
-              <input type='text'  id='name' placeholder='Enter your Name' onChange={handleNameChange} required/>
-              <input type='text'  id='prn' placeholder='Enter your PRN' onChange={handlePrnChange} required/>
-              <input type='text'  id='phone' placeholder='Enter your Mobile Number' onChange={handlePhoneChange} required/>
-              <input type='email'  id='email' placeholder='Enter your Email Id' onChange={handleEmailChange} required/>
-              <button className='btn' type='submit'>Submit</button>
+            <form>
+              <input type='text'  id='name' placeholder='Enter your Name' onChange={handleNameChange} />
+              <input type='text'  id='prn' placeholder='Enter your PRN' onChange={handlePrnChange}/>
+              <input type='text'  id='phone' placeholder='Enter your Mobile Number' onChange={handlePhoneChange}/>
+              <input type='email'  id='email' placeholder='Enter your Email Id' onChange={handleEmailChange}/>
+              <button className='btn' type='submit' onClick={handleSubmit}>Submit</button>
             </form>
           </div>
           </div>

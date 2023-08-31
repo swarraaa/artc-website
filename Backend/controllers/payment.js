@@ -11,12 +11,14 @@ const checkOut = async (req, res) => {
   try{
     var options = {
       amount: 7000,  // amount in the smallest currency unit
-      currency: "INR"
+      currency: "INR",
+      
     };
     const order = await instance.orders.create(options)
     console.log(order);
     res.status(200).json({success:true,order})
   }catch(err){
+    console.log(err);
     res.status(500).json({msg:err})
   }
 }
@@ -32,7 +34,8 @@ const paymentVerification = async (req,res)=>{
     console.log(generated_signature);
     const isAuthentic = generated_signature == razorpay_signature;
     if (isAuthentic) {
-      createNewStudent();
+      // res.redirect('http://localhost:5000/payment/checkout')
+      // instance.payments.capture(paymentId, amount, currency)
       res.status(200).json({success:true})
       
     }else{
