@@ -17,17 +17,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 28rem;
+  width: 26rem;
   text-align: center;
   border-radius: 1rem;
   /* background-color: var(--color-primary); */
   border: 1px solid var(--color-primary);
   transition: all 0.3s ease-in-out;
 }
-.event:hover {
+/* .event:hover {
   translate: -10px -10px;
   box-shadow: 10px 10px 0 var(--color-primary);
-}
+} */
 .hidden {
   display: none;
 }
@@ -43,7 +43,7 @@
 .event-image img {
   width: 20rem;
   height: 12rem;
-  object-fit: cover;
+  /* object-fit: cover; */
   margin: 2rem 2rem 0rem 2rem;
   border-radius: 0.7rem;
 }
@@ -57,14 +57,16 @@
 .event-info > h1 {
   text-align: left;
   margin-bottom: 0.5rem;
-  /* border: 1px solid whitesmoke; */
   width: 100%;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 .event-info > p {
   text-align: left;
-  /* color: black; */
   width: 20rem;
   margin-bottom: 1rem;
+  font-weight: 100;
+  font-size: 0.8rem;
 }
 .btn {
   margin: 1rem 1rem 1rem 0;

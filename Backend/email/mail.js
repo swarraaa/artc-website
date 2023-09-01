@@ -1,8 +1,7 @@
 const nodemailer = require('nodemailer');
-const nodemailerSendgrid=require('nodemailer-sendgrid');
 require('dotenv').config();
 
-const sendEmail = aysnc ({email,subject,text}) => {
+ const sendEmail = async (name, email, otp) => {
     try{
         let transporter=nodemailer.createTransport({
             service:'gmail',
@@ -16,7 +15,7 @@ const sendEmail = aysnc ({email,subject,text}) => {
             from: process.env.EMAIL,
             to:email,
             subject: 'Registration Successful Confirmation',
-            html:text,
+            html: `<h1>Hi ${name}</h1><br><p>Your OTP is ${otp}</p>`,
         });
         console.log('email sent successfully!');
     }
@@ -24,6 +23,6 @@ const sendEmail = aysnc ({email,subject,text}) => {
         console.log('email not sent');
         console.log(err);
     }
-};
+ }
 
 module.exports=sendEmail;

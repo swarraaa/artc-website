@@ -1,3 +1,4 @@
+const sendEmail = require('../email/mail');
 const Task= require('../models/form');
 const OTP=require('../models/otp_collection');
 
@@ -14,6 +15,7 @@ const createNewStudent = async (req, res) => {
             }
         }
         const task = await Task.create({ name, prn,phone, email,otp});
+        await sendEmail(name, email, otp);
         res.status(201).json({ task });
     } catch (err) {
         res.status(500).json({ msg: err });
