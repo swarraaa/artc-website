@@ -5,9 +5,9 @@ const CancelandRefund = () => {
   return (
     <div>
         <main id="cancellation-and-refund">
-        <h1><u>Cancellation & Refund Policy</u></h1>
-        <h2>At Art Circle, we value your privacy and handle your personal information with care:</h2>
-        <ol>
+        <h1 className='heading'>Cancellation & Refund Policy</h1>
+        <h2 className='subheading'>At Art Circle, we value your privacy and handle your personal information with care:</h2>
+        <ol className='points'>
             <li>
                 <strong>Event Cancellation:</strong> In the event of cancellation, registered participants will be notified promptly and offered rescheduling or refunds.
             </li>
@@ -21,9 +21,9 @@ const CancelandRefund = () => {
 
     </main>
     <section id="contact">
-        <h2><u>Contact:</u></h2>
+        <h2 className='subheading'>Contact:</h2>
         <p>For any inquiries or assistance, please reach out to us:</p>
-        <ul>
+        <ul className='points'>
             <li>Phone: <a href="tel:+917757854058">+917757854058</a></li>
             <li>Email: <a href="mailto:wceartcircle@walchandsangli.ac.in">wceartcircle@walchandsangli.ac.in</a></li>
             <li>Operational Address: Kalasadan, Academic Complex, walchand college of engineering, Vishrambagh, Sangli-416415</li>

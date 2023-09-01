@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import ABTIMAGE from '../../assets/about.jpg'
+import ABTIMAGE from '../../assets/aboutusimg.png'
 
 const About = () => {
   return (
@@ -9,8 +9,8 @@ const About = () => {
       <div className='main'>
         <div className='about'>
           <h1>About Us</h1>
-          <div className='heading'>
-          <div className='about-img'>
+        <div className='heading'>
+        <div className='about-img'>
           <img src={ABTIMAGE} alt=''/>
         </div>
         <div className='about-text'>

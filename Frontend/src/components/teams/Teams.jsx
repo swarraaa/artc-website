@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import {motion} from 'framer-motion'
 import './teams.css'
 
-import DANCE from '../../assets/dance_t.jpg'
+import DANCE from '../../assets/dance.jpg'
 import MUSIC from '../../assets/music_t.jpeg'
 import PHOTO from '../../assets/photo_team.jpg'
 import DRAMA from '../../assets/drama_t.jpg'

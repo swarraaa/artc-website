@@ -1,7 +1,7 @@
 import React from 'react'
 import './members.css'
-import {GrInstagram} from 'react-icons/gr'
-import {AiOutlineLinkedin} from 'react-icons/ai'
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PRESIDENT from '../../assets/sarvadnya.JPG'
 import VICEPRESIDENT from '../../assets/ruturaj2.jpg'
 import SECRETARY from '../../assets/prajval.jpeg'
@@ -22,10 +22,10 @@ const Members = () => {
               <h5>Prof. Kiran Madhale</h5>
               <h6>Staff Advisor-WCE Art Circle</h6>
             </div>
-            {/* <div className="member-socials">
-              <a href=''><GrInstagram className='profiles'/></a>
-              <a href=''><AiOutlineLinkedin className='profiles'/></a>
-            </div> */}
+            <div className="member-socials">
+              <a href='https://www.linkedin.com/company/wce-art-circle/' target={'_blank'}><LinkedInIcon fontSize='large'/></a>
+              <a href='https://www.instagram.com/wce_artcircle/' target={'_blank'}><InstagramIcon fontSize='large'/></a>
+            </div>
           </div>
         </div>
         <div className="member">
@@ -37,10 +37,10 @@ const Members = () => {
               <h5>Sarvadnya More</h5>
               <h6>President-WCE Art Circle</h6>
             </div>
-            {/* <div className="member-socials">
-              <a href='https://instagram.com/smile_with_sarvadnya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D'><GrInstagram className='profiles'/></a>
-              <a href='https://www.linkedin.com/company/wce-art-circle/mycompany/'><AiOutlineLinkedin className='profiles'/></a>
-            </div> */}
+            <div className="member-socials">
+              <a href='https://www.linkedin.com/company/wce-art-circle/mycompany/' target={'_blank'}><LinkedInIcon fontSize='large'/></a>
+              <a href='https://instagram.com/smile_with_sarvadnya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D' target={'_blank'}><InstagramIcon fontSize='large'/></a>
+            </div>
           </div>
         </div>
         <div className="member">
@@ -52,10 +52,10 @@ const Members = () => {
               <h5>Ruturaj Chikurde</h5>
               <h6>Vice-President-WCE Art Circle</h6>
             </div>
-            {/* <div className="member-socials">
-              <a href='https://www.instagram.com/r__ruturaj/?igshid=ZDdkNTZiNTM%3D' target={'_blank'}><GrInstagram className='profiles'/></a>
-              <a href='https://www.linkedin.com/in/ruturaj-chikurde-72033b243' target={'_blank'}><AiOutlineLinkedin className='profiles'/></a>
-            </div> */}
+            <div className="member-socials">
+              <a href='https://www.linkedin.com/in/ruturaj-chikurde-72033b243' target={'_blank'}><LinkedInIcon fontSize='large'/></a>
+              <a href='https://www.instagram.com/r__ruturaj/?igshid=ZDdkNTZiNTM%3D' target={'_blank'}><InstagramIcon fontSize='large'/></a>
+            </div>
           </div>
         </div>
         
@@ -68,10 +68,10 @@ const Members = () => {
               <h5>Prajval Tayde-Patil</h5>
               <h6>Secretary-WCE Art Circle</h6>
             </div>
-            {/* <div className="member-socials">
-              <a href='https://instagram.com/prajval_tayde_patil?igshid=MzRlODBiNWFlZA=='><GrInstagram className='profiles'/></a>
-              <a href='https://www.linkedin.com/in/prajvaltayde'><AiOutlineLinkedin className='profiles'/></a>
-            </div> */}
+            <div className="member-socials">
+              <a href='https://www.linkedin.com/in/prajvaltayde' target={'_blank'}><LinkedInIcon fontSize='large'/></a>
+              <a href='https://instagram.com/prajval_tayde_patil?igshid=MzRlODBiNWFlZA==' target={'_blank'}><InstagramIcon fontSize='large'/></a>
+            </div>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ a:hover{
 #privacy-policy,#terms-and-conditions,#cancellation-and-refund,#contact{
     margin:1em;
 }
-/* .heading{
+.heading{
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 0.5em;
@@ -31,7 +31,15 @@ a:hover{
     margin-left: 6rem;
     margin-bottom: 0.5em;
 }
-p{
+#contact p{
     margin-left: 3rem;
     margin-bottom: 0.5em;
-} */
+}
+#contact   a{
+    color: rgb(98, 171, 236);
+    cursor: pointer;
+}
+#contact   a:hover{
+    text-decoration: underline;
+}
+

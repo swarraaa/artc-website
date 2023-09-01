@@ -4,9 +4,9 @@ import './styles.css'
 const TermsandConditions = () => {
   return (
     <div><main id="terms-and-conditions">
-    <h1><u>Terms & Conditions</u></h1>
-    <h3>Welcome to WCE Art Circle, a cultural club dedicated to promoting art and creativity. By participating in our events, you agree to the following terms and conditions:</h3>
-    <ol>
+    <h1 className='heading'>Terms & Conditions</h1>
+    <h6 className='subheading'>Welcome to WCE Art Circle, a cultural club dedicated to promoting art and creativity. By participating in our events, you agree to the following terms and conditions:</h6>
+    <ol className='points'>
         <li>Respectful Conduct: Treat fellow participants, artists, and staff with respect and courtesy.</li>
         <li>Event Guidelines: Follow specific guidelines set for each event to ensure a safe and enjoyable experience.</li>
         <li>Photography &amp; Media: Consent to the use of your likeness in event-related photographs and media.</li>
@@ -17,9 +17,9 @@ const TermsandConditions = () => {
     </ol>
 </main>
     <section id="contact">
-        <h2><u>Contact:</u></h2>
+        <h2 className='subheading'>Contact:</h2>
         <p>For any inquiries or assistance, please reach out to us:</p>
-        <ul>
+        <ul className='points'>
             <li>Phone: <a href="tel:+917757854058">+917757854058</a></li>
             <li>Email: <a href="mailto:wceartcircle@walchandsangli.ac.in">wceartcircle@walchandsangli.ac.in</a></li>
             <li>Operational Address: Kalasadan, Academic Complex, walchand college of engineering, Vishrambagh, Sangli-416415</li>

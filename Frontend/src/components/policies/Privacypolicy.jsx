@@ -14,12 +14,12 @@ const Privacypolicy = () => {
             <li>Opt-Out: You can opt out of communication or request data removal by contacting our support team.</li>
         </ul>
     </main>
-    <section id="contact">
+    <section id="contact" >
         <h2 className='subheading'>Contact:</h2>
         <p>For any inquiries or assistance, please reach out to us:</p>
         <ul className='points'>
-            <li>Phone:+917757854058</li>
-            <li>Email:wceartcircle@walchandsangli.ac.in</li>
+            <li>Phone: <a href="tel:+917757854058">+917757854058</a></li>
+            <li>Email: <a href="mailto:wceartcircle@walchandsangli.ac.in">wceartcircle@walchandsangli.ac.in</a></li>
             <li>Operational Address: Kalasadan, Academic Complex, walchand college of engineering, Vishrambagh, Sangli-416415</li>
         </ul>
     </section>
