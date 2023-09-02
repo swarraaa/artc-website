@@ -3,8 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
 }
 .about{
     width: 95%;
@@ -75,8 +73,6 @@
     margin: 0;
     height: 20rem;
     width: 28rem;
-    /* padding-left: 2rem;
-    padding-right: 2rem; */
     object-fit: cover;
 }
 .about h6{
