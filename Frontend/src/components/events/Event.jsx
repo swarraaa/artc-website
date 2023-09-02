@@ -50,6 +50,7 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
       Swal.fire('Please enter a valid phone number')
       return
     }
+    else if(name && prn && phone && email){
     const {
       data: { key },
     } = await axios.get('https://artc-website-production.up.railway.app/payment/getKey')
@@ -105,6 +106,7 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
     // console.log(name,prn,phone,email);
     const razor = new window.Razorpay(options)
     razor.open()
+  }
   }
 
   return (
