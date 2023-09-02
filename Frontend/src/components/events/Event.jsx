@@ -52,10 +52,10 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
     }
     const {
       data: { key },
-    } = await axios.get('http://localhost:5000/payment/getKey')
+    } = await axios.get('https://artc-website-production.up.railway.app/payment/getKey')
     const {
       data: { order },
-    } = await axios.post('http://localhost:5000/payment/checkout')
+    } = await axios.post('https://artc-website-production.up.railway.app/payment/checkout')
     const data1 = { name, prn, phone, email }
     console.log(data1)
     const options = {
@@ -78,7 +78,7 @@ const Event = ({ index, idx, Name, date, description, icon }) => {
           email: email,
         }
         const result = await axios.post(
-          'http://localhost:5000/payment/paymentverification',
+          'https://artc-website-production.up.railway.app/payment/paymentverification',
           data
         )
         console.log(result)
