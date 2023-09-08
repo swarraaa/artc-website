@@ -4,7 +4,7 @@ require('dotenv').config();
  const sendEmail = async (name, email, otp) => {
     try{
         let transporter=nodemailer.createTransport({
-            service:'gmail',
+            service:'outlook',
             auth:{
                 user:process.env.EMAIL,
                 pass: process.env.PASS,
