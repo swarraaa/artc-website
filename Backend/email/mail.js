@@ -1,21 +1,21 @@
-const nodemailer = require('nodemailer');
-require('dotenv').config();
+const nodemailer = require('nodemailer')
+require('dotenv').config()
 
- const sendEmail = async (name, email, otp) => {
-    try{
-        let transporter=nodemailer.createTransport({
-            service:'gmail',
-            auth:{
-                user:process.env.EMAIL,
-                pass: process.env.PASS,
-            },
-
-        });
-        await transporter.sendMail({
-            from: process.env.EMAIL,
-            to:email,
-            subject: 'Registration Successful Confirmation',
-            html: `<h2>Hi ${name}</h2>
+const sendEmail = async (name, email, otp) => {
+  console.log(process.env.EMAIL, process.env.PASS)
+  try {
+    let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASS,
+      },
+    })
+    await transporter.sendMail({
+      from: process.env.EMAIL,
+      to: email,
+      subject: 'Registration Successful Confirmation',
+      html: `<h2>Hi ${name}</h2>
             <br>
             <p>Get ready to mark your calendar 🗓️, because something incredible is coming your way! We are pleased to inform you that your registration for the GIM 2023 was successful!🎉. Your participation adds a spark to our event, and we can't wait to share this exciting journey with you!!</p>
             <br>
@@ -30,13 +30,12 @@ require('dotenv').config();
             <p>Regards,</p>
             <p>Team ArtCircle</p>
             `,
-        });
-        console.log('email sent successfully!');
-    }
-    catch(err){
-        console.log('email not sent');
-        console.log(err);
-    }
- }
+    })
+    console.log('email sent successfully!')
+  } catch (err) {
+    console.log('email not sent')
+    console.log(err)
+  }
+}
 
-module.exports=sendEmail;
+module.exports = sendEmail
